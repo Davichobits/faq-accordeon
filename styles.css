@@ -16,6 +16,7 @@
   --White: hsl(0, 0%, 100%);
   --Light-pink: hsl(275, 100%, 97%);
   --Grayish-purple: hsl(292, 16%, 49%);
+  --Light-purple: rgb(173, 40, 235);
   --Dark-purple: hsl(292, 42%, 14%);
   --Font-WorkSans: "WorkSans", sans-serif;
 }
@@ -58,14 +59,18 @@ body{
   }
 
   & .faq{
-    & .question{
+    & .question-container{
       padding: 24px 0;
       list-style: none;
       display: flex;
       justify-content: space-between;
-      & p{
+      cursor: pointer;
+      & .question{
         width: 220px;
         font-weight: 600;
+      }
+      &:hover{
+        color: var(--Light-purple);
       }
     }
 
@@ -90,4 +95,23 @@ body{
   }
 
   
+}
+
+@media screen and (min-width: 620px) {
+  body{
+    background-image: url('./assets/images/background-pattern-desktop.svg');
+  }
+
+  .card{
+    width: 600px;
+    padding: 40px;
+    & .faq{
+      & .question-container{
+        & .question{
+          width: unset;
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
 }
