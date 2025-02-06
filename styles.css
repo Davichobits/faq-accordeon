@@ -68,6 +68,14 @@ body{
         font-weight: 600;
       }
     }
+
+    &[open] .icon-btn {
+      content: url("./assets/images/icon-minus.svg");
+    }
+
+    & .icon-btn {
+      content: url("./assets/images/icon-plus.svg");
+    }
     
     & .description{
       font-size: .875rem;
